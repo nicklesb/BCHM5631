@@ -16,8 +16,8 @@ library(tidyverse)
 library(ggpubr)
 library(Gviz)
 source("/scratch/Shares/rinnclass/CLASS_2022/JR/BCHM5631/CLASS_2022/util/_setup.R")
-source("../../../util/intersect_functions.R")
-source("../../../util/plotting_functions.R")
+source("/scratch/Shares/rinnclass/CLASS_2022/JR/BCHM5631/CLASS_2022/util/intersect_functions.R")
+source("/scratch/Shares/rinnclass/CLASS_2022/JR/BCHM5631/CLASS_2022/util/plotting_functions.R")
 ```
 
 # Welcome to RStudio-viz! Let's take a little tour.
@@ -212,7 +212,7 @@ hist(peaks_per_dbp$num_peaks, breaks = 40)
 # saving the figure (we will do this over and over again :)
 # we will learn ggplot later but we use PDF and turn of null device (plot window) 
 
-pdf("figures/hist_of_peaks_per_dbp.pdf")
+pdf("/Users/niba5670/nickles_scratch/figures/hist_of_peaks_per_dbp.pdf")
 hist(peaks_per_dbp$num_peaks, breaks = 40) 
 dev.off()
 
@@ -224,7 +224,7 @@ dev.off()
 
 # we will use base R to plot the num_peaks versus genome coverage
 
-pdf("figures/num_peaks_vs_coverage.pdf")
+pdf("/Users/niba5670/nickles_scratch/figures/num_peaks_vs_coverage.pdf")
 
 plot(x = peaks_per_dbp$num_peaks, y = peaks_per_dbp$total_peak_length)
 
